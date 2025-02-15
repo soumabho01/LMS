@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library Management System</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #0e0808;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 400px;
+                background: rgb(231, 236, 233);
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+
+            .header {
+                background-color: #00ff3c;
+                color: white;
+                text-align: center;
+                padding: 2px;
+            }
+
+            .form {
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .form input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+
+            .form button {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .form button:hover {
+                background-color: #0056b3;
+            }
+
+            .switch {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            .switch a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+            .switch a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container" id="login-page">
+            <div class="header">
+                <h1 style="color: #0e0808; font-size:50px;font-style:italic;">Login</h1>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Username" style="background-color: #0e0808;">
+                <input type="password" placeholder="Password" required style="background-color: #0e0808;">
+                <button style="background-color: #0fe928;"><a href="index2.html">Login</a></button>
+                <div class="switch">
+                    <p>Don't have an account? <a href="#" onclick="showSignUpPage()">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="signup-page" style="display: none;">
+            <div class="header">
+                <h1 style="color: #0e0808; font-size:50px;font-style: italic;">Sign Up</h1>
+            </div>
+            <div class="form">
+                <input type="text" placeholder="Username" required style="background-color: #0e0808;">
+                <input type="email" placeholder="Email" required style="background-color: #0e0808;">
+                <input type="password" placeholder="Password" required style="background-color: #0e0808;">
+                <button style="background-color: #00ff3c;"><a href="index2.html">Sign Up</a></button>
+                <div class="switch">
+                    <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showSignUpPage() {
+                document.getElementById('login-page').style.display = 'none';
+                document.getElementById('signup-page').style.display = 'block';
+            }
+
+            function showLoginPage() {
+                document.getElementById('signup-page').style.display = 'none';
+                document.getElementById('login-page').style.display = 'block';
+            }
+        </script>
+    </body>
+
+    </html>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
