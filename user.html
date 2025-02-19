@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System - User</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../style/styles.css" />
+  </head>
+  <body>
+    <!-- Login Container -->
+    <div class="container" id="login-page">
+      <div class="header">
+        <h1 style="color: #08080e; font-size:50px;font-style:italic;">Login</h1>
+      </div>
+      <div class="form">
+        <form action="/login" method="POST">
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+            style="background-color: white;"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            style="background-color: white;"
+          />
+          <button type="submit" style="background-color: rgb(255, 0, 8)">Login</button>
+        </form>
+        <div class="switch">
+          <p>
+            Don't have an account?
+            <a href="#" onclick="showSignUpPage()">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Container -->
+    <div class="container" id="signup-page" style="display: none;">
+      <div class="header">
+        <h1 style="color: #0e0808; font-size:50px;font-style: italic;">Sign Up</h1>
+      </div>
+      <div class="form">
+        <form action="/register" method="POST">
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+            style="background-color: white;"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            style="background-color: white;"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            style="background-color: white;"
+          />
+          <button type="submit" style="background-color: blue">Sign Up</button>
+        </form>
+        <div class="switch">
+          <p>
+            Already have an account?
+            <a href="#" onclick="showLoginPage()">Login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script>
+        function showSignUpPage() {
+            document.getElementById('login-page').style.display = 'none';
+            document.getElementById('signup-page').style.display = 'block';
+        }
+
+        function showLoginPage() {
+            document.getElementById('signup-page').style.display = 'none';
+            document.getElementById('login-page').style.display = 'block';
+        }
+    </script>
+    <script src="../app.js"></script>
+  </body>
+</html>

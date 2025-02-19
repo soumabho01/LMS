@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System - Admin</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../style/styles.css" />
+  </head>
+  <body>
+    <!-- Admin Login Container -->
+    <div class="container" id="admin-login-page">
+      <div class="header" style="background-color: darkred;">
+        <h1 style="color: #fff; font-size:50px;font-style: italic;">Admin Login</h1>
+      </div>
+      <div class="form">
+        <form action="/admin-login" method="POST">
+          <input
+            type="text"
+            name="username"
+            placeholder="Admin Username"
+            required
+            style="background-color: white;"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            style="background-color: white;"
+          />
+          <button type="submit" style="background-color: darkred;">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- External JavaScript (if needed for additional admin-specific functionality) -->
+    <script src="../app.js"></script>
+  </body>
+</html>
